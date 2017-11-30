@@ -1,0 +1,4 @@
+rootProject.name = 'study-sso-example'
+include 'study-common'
+include 'study-sso-example-client'
+

@@ -1,0 +1,77 @@
+//group 'com.itao.study'
+//version '1.0-SNAPSHOT'
+//
+//apply plugin: 'java'
+//
+//sourceCompatibility = 1.8
+
+allprojects {
+    group 'com.itao.study'
+    version '1.0-SNAPSHOT'
+    apply plugin: 'java'
+    apply plugin: 'idea'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    // java编译的时候缺省状态下会因为中文字符而失败
+    [compileJava,compileTestJava,javadoc]*.options*.encoding = 'UTF-8'
+
+    repositories {
+        mavenLocal()
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/central/' }
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public" }
+        mavenCentral()
+        jcenter()
+        maven { url "http://repo.spring.io/snapshot" }
+        maven { url "http://repo.spring.io/milestone" }
+        maven { url 'http://maven.springframework.org/release' }
+        maven { url 'http://maven.springframework.org/milestone' }
+    }
+
+    ext {
+//        springboot版本定义在模块中
+//        springbootVersion = '1.5.8.RELEASE'
+        springVersion = '5.0.2.RELEASE'
+        gsonVersion = '2.8.1'
+        servletapiVersion = '3.1.0'
+        slf4japiVersion = '1.7.25'
+        logbackVersion = '1.2.3'
+
+    }
+}
+
+subprojects {
+
+    dependencies {
+        compile("org.slf4j:slf4j-api:${slf4japiVersion}")
+        compile("ch.qos.logback:logback-classic:${logbackVersion}")
+        compile("ch.qos.logback:logback-core:${logbackVersion}")
+        compile("org.slf4j:jcl-over-slf4j:${slf4japiVersion}")
+        compile("org.slf4j:log4j-over-slf4j:${slf4japiVersion}")
+
+        compile("org.springframework:spring-core:${springVersion}")
+        compile("org.springframework:spring-context:${springVersion}")
+        compile("org.springframework:spring-beans:${springVersion}")
+        compile("org.springframework:spring-aop:${springVersion}")
+        compile("org.springframework:spring-web:${springVersion}")
+        compile("org.springframework:spring-webmvc:${springVersion}")
+        compile("org.springframework:spring-test:${springVersion}")
+        compile("org.springframework:spring-expression:${springVersion}")
+        compile("org.springframework:spring-context-support:${springVersion}")
+        compile("org.springframework:spring-aspects:${springVersion}")
+        compile("org.springframework:spring-orm:${springVersion}")
+        compile("org.springframework:spring-messaging:${springVersion}")
+        compile("org.springframework:spring-jms:${springVersion}")
+        compile("org.springframework:spring-jdbc:${springVersion}")
+        compile("org.springframework:spring-tx:${springVersion}")
+
+        testCompile group: 'junit', name: 'junit', version: '4.12'
+    }
+
+    jar {
+        manifest {
+            attributes("Implementation-Title": "Gradle")
+        }
+    }
+}

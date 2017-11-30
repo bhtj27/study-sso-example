@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/study-common.iml" filepath="$PROJECT_DIR$/.idea/modules/study-common.iml" group="study-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/study-common/study-common_main.iml" filepath="$PROJECT_DIR$/.idea/modules/study-common/study-common_main.iml" group="study-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/study-common/study-common_test.iml" filepath="$PROJECT_DIR$/.idea/modules/study-common/study-common_test.iml" group="study-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/study-sso-example.iml" filepath="$PROJECT_DIR$/.idea/modules/study-sso-example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/study-sso-example-client/study-sso-example-client.iml" filepath="$PROJECT_DIR$/.idea/modules/study-sso-example-client/study-sso-example-client.iml" group="study-sso-example-client" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/study-sso-example-client/study-sso-example-client_main.iml" filepath="$PROJECT_DIR$/.idea/modules/study-sso-example-client/study-sso-example-client_main.iml" group="study-sso-example-client" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/study-sso-example-client/study-sso-example-client_test.iml" filepath="$PROJECT_DIR$/.idea/modules/study-sso-example-client/study-sso-example-client_test.iml" group="study-sso-example-client" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/study-sso-example_main.iml" filepath="$PROJECT_DIR$/.idea/modules/study-sso-example_main.iml" group="study-sso-example" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/study-sso-example_test.iml" filepath="$PROJECT_DIR$/.idea/modules/study-sso-example_test.iml" group="study-sso-example" />
+    </modules>
+  </component>
+</project>
